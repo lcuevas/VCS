@@ -20,6 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Welcome"></activity>
+        <activity android:name=".MainActivity"></activity>
+
     </application>
 
 </manifest>

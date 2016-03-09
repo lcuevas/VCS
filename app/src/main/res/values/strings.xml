@@ -9,5 +9,6 @@
     <string name="title_activity_login">login</string>
     <string name="title_activity_register">Register</string>
     <string name="title_activity_logout">Logout</string>
+    <string name="logout">LOGOUT</string>
 
 </resources>

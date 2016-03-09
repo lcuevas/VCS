@@ -4,6 +4,7 @@ package com.eresvision.stv2.lcchat;
         import java.util.ArrayList;
         import java.util.List;
 
+        import android.content.Intent;
         import android.os.Bundle;
         import android.support.v4.app.Fragment;
         import android.support.v4.app.FragmentManager;
@@ -19,6 +20,7 @@ package com.eresvision.stv2.lcchat;
         import android.widget.RelativeLayout;
 
         import com.eresvision.stv2.adapters.NavListAdapter;
+        import com.eresvision.stv2.auth.Register;
         import com.eresvision.stv2.fragments.MyAbout;
         import com.eresvision.stv2.fragments.MyHome;
         import com.eresvision.stv2.fragments.MySettings;
@@ -131,8 +133,23 @@ public class MainActivity extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the MyHome/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        if (actionBarDrawerToggle.onOptionsItemSelected(item))
-            return true;
+        if (actionBarDrawerToggle.onOptionsItemSelected(item)){
+            return true;   }
+
+
+
+        switch(item.getItemId()) {
+
+            case R.id.action_logout:
+                Intent intent = new Intent(getApplicationContext(), Register.class);
+                this.startActivity(intent);
+                finish();
+                break;
+
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
 
         return super.onOptionsItemSelected(item);
     }

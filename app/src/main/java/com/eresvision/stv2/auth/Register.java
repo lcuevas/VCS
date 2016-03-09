@@ -57,13 +57,18 @@ public class Register extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             if(jsonObject.names().get(0).equals("success")){
                                 Toast.makeText(getApplicationContext(),"Bienvenido "+jsonObject.getString("success"),Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getApplicationContext(),Welcome.class));
-                            }else {
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
+                            }else if(jsonObject.names().get(0).equals("error")) {
                                 Toast.makeText(getApplicationContext(), "Error de registro " +jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(getApplicationContext(), "Error de servidor ", Toast.LENGTH_SHORT).show();
                             }
+                            finish();
 
                         } catch (JSONException e) {
                             e.printStackTrace();
+
                         }
 
 
@@ -71,7 +76,7 @@ public class Register extends AppCompatActivity {
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        Toast.makeText(getApplicationContext(), "Error de Conexión o Sin Internet", Toast.LENGTH_SHORT).show();
                     }
                 }){
                     @Override
