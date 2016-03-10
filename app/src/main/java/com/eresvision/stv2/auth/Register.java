@@ -17,7 +17,7 @@ package com.eresvision.stv2.auth;
         import com.android.volley.toolbox.Volley;
         import com.eresvision.stv2.lcchat.MainActivity;
         import com.eresvision.stv2.lcchat.R;
-        import com.eresvision.stv2.lcchat.Welcome;
+
 
         import org.json.JSONException;
         import org.json.JSONObject;
