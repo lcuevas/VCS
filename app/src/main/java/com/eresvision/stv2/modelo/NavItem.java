@@ -1,4 +1,4 @@
-package com.eresvision.stv2.models;
+package com.eresvision.stv2.modelo;
 
 
 public class NavItem {

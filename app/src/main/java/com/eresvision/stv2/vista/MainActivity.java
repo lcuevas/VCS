@@ -1,31 +1,31 @@
-package com.eresvision.stv2.lcchat;
+package com.eresvision.stv2.vista;
 
 
-        import java.util.ArrayList;
-        import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.support.v4.app.Fragment;
-        import android.support.v4.app.FragmentManager;
-        import android.support.v4.widget.DrawerLayout;
-        import android.support.v7.app.ActionBarDrawerToggle;
-        import android.support.v7.app.AppCompatActivity;
-        import android.view.Menu;
-        import android.view.MenuItem;
-        import android.view.View;
-        import android.widget.AdapterView.OnItemClickListener;
-        import android.widget.AdapterView;
-        import android.widget.ListView;
-        import android.widget.RelativeLayout;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 
-        import com.eresvision.stv2.adapters.NavListAdapter;
-        import com.eresvision.stv2.auth.Register;
-        import com.eresvision.stv2.fragments.MyAbout;
-        import com.eresvision.stv2.fragments.MyHome;
-        import com.eresvision.stv2.fragments.MySettings;
-        import com.eresvision.stv2.models.NavItem;
+import com.eresvision.stv2.lcchat.R;
+import com.eresvision.stv2.vista.fragments.MyAbout;
+import com.eresvision.stv2.vista.fragments.MyHome;
+import com.eresvision.stv2.vista.fragments.MySettings;
+import com.eresvision.stv2.modelo.NavItem;
 
+// CLASE
 public class MainActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     ActionBarDrawerToggle actionBarDrawerToggle;
 
     @Override
+
+    // METODO Called when the activity is first created
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -45,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawerPane = (RelativeLayout) findViewById(R.id.drawer_pane);
-        lvNav = (ListView) findViewById(R.id.nav_list);
+        drawerPane = (RelativeLayout) findViewById(R.id.panel_lateral);
+        lvNav = (ListView) findViewById(R.id.contenido_lateral);
 
        /* listNavItems = new ArrayList<NavItem>();*/
         listNavItems = new ArrayList<NavItem>();
@@ -70,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         // load first fragment as default:
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.main_content, listFragments.get(0)).commit();
+                .replace(R.id.contenedor_central, listFragments.get(0)).commit();
 
         setTitle(listNavItems.get(0).getTitle());
         lvNav.setItemChecked(0, true);
@@ -86,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 fragmentManager
                         .beginTransaction()
-                        .replace(R.id.main_content, listFragments.get(position))
+                        .replace(R.id.contenedor_central, listFragments.get(position))
                         .commit();
 
                 setTitle(listNavItems.get(position).getTitle());
@@ -120,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // METODO To specify the options menu for an activity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -128,17 +131,18 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    // METODO Whenever an item in your options menu is selected
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the MyHome/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)){
-            return true;   }
+        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
 
 
-
-        switch(item.getItemId()) {
+        switch (item.getItemId()) {
 
             case R.id.action_logout:
                 Intent intent = new Intent(getApplicationContext(), Register.class);
@@ -154,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    // METODO Called when activity start-up is complete
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub

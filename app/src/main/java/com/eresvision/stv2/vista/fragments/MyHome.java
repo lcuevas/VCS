@@ -1,4 +1,4 @@
-package com.eresvision.stv2.fragments;
+package com.eresvision.stv2.vista.fragments;
 
 
         import java.util.List;
@@ -18,13 +18,13 @@ package com.eresvision.stv2.fragments;
         import android.widget.TabHost.OnTabChangeListener;
         import android.widget.TabHost.TabContentFactory;
 
-        import com.eresvision.stv2.adapters.MyFragmentPagerAdapter;
-        import com.eresvision.stv2.inner.fragments.Tab1Fragment;
-        import com.eresvision.stv2.inner.fragments.Tab2Fragment;
-        import com.eresvision.stv2.inner.fragments.Tab3Fragment;
-        import com.eresvision.stv2.inner.fragments.Tab4Fragment;
-        import com.eresvision.stv2.inner.fragments.Tab5Fragment;
-        import com.eresvision.stv2.inner.fragments.Tab6Fragment;
+        import com.eresvision.stv2.controlador.MyFragmentPagerAdapter;
+        import com.eresvision.stv2.vista.fragments.tabs.Tab1Fragment;
+        import com.eresvision.stv2.vista.fragments.tabs.Tab2Fragment;
+        import com.eresvision.stv2.vista.fragments.tabs.Tab3Fragment;
+        import com.eresvision.stv2.vista.fragments.tabs.Tab4Fragment;
+        import com.eresvision.stv2.vista.fragments.tabs.Tab5Fragment;
+        import com.eresvision.stv2.vista.fragments.tabs.Tab6Fragment;
         import com.eresvision.stv2.lcchat.R;
 
 public class MyHome extends Fragment implements OnTabChangeListener,
@@ -100,7 +100,7 @@ public class MyHome extends Fragment implements OnTabChangeListener,
 
     private void initializeTabHost(Bundle args) {
 
-        tabHost = (TabHost) v.findViewById(R.id.tabhost1);
+        tabHost = (TabHost) v.findViewById(R.id.pestanas);
         tabHost.setup();
 
         for (int i = 1; i <= 6; i++) {

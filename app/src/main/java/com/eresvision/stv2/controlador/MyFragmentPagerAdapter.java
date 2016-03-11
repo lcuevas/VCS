@@ -1,4 +1,4 @@
-package com.eresvision.stv2.adapters;
+package com.eresvision.stv2.controlador;
 
 
         import java.util.List;

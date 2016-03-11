@@ -1,4 +1,4 @@
-package com.eresvision.stv2.auth;
+package com.eresvision.stv2.vista;
 
         import android.content.Intent;
         import android.os.Bundle;
@@ -15,7 +15,6 @@ package com.eresvision.stv2.auth;
         import com.android.volley.VolleyError;
         import com.android.volley.toolbox.StringRequest;
         import com.android.volley.toolbox.Volley;
-        import com.eresvision.stv2.lcchat.MainActivity;
         import com.eresvision.stv2.lcchat.R;
 
 

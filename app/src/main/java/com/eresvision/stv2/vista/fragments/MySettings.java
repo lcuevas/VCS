@@ -1,4 +1,4 @@
-package com.eresvision.stv2.fragments;
+package com.eresvision.stv2.vista.fragments;
 
 
         import com.eresvision.stv2.lcchat.R;

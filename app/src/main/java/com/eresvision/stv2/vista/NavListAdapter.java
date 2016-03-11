@@ -1,9 +1,9 @@
-package com.eresvision.stv2.adapters;
+package com.eresvision.stv2.vista;
 
         import java.util.List;
 
-        import com.eresvision.stv2.models.NavItem;
         import com.eresvision.stv2.lcchat.*;
+        import com.eresvision.stv2.modelo.NavItem;
 
         import android.annotation.SuppressLint;
         import android.content.Context;
@@ -34,7 +34,7 @@ public class NavListAdapter extends ArrayAdapter<NavItem>{
 
         TextView tvTitle  = (TextView) v.findViewById(R.id.title);
         TextView tvSubTitle = (TextView) v.findViewById(R.id.subtitle);
-        ImageView navIcon =  (ImageView) v.findViewById(R.id.nav_icon);
+        ImageView navIcon =  (ImageView) v.findViewById(R.id.icono_lateral);
 
         NavItem navItem = listNavItems.get(position);
 
