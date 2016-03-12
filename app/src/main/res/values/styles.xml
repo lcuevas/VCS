@@ -17,13 +17,35 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+
+
+
+
+    <style name="AppBaseTheme.LC" parent="AppBaseTheme" >
+        <item name="android:textColorPrimaryInverse">@color/primary_text_material_dark</item>
+        <item name="android:textColorPrimary">@color/primary_text_material_light</item>
+        <item name="android:colorBackground">@color/background_material_light</item>
+        <item name="android:actionMenuTextColor">@color/gris</item>
+        <item name="android:colorForeground">@color/foreground_material_light</item>
+        <item name="android:panelColorForeground">@color/white</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:textColorSecondaryInverse">@color/secondary_text_material_dark</item>
+
+
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Texto.negro" parent="AppBaseTheme" >
+        <item name="android:textColor">@color/gris</item>
+        <item name="android:itemTextAppearance">@style/AppBaseTheme</item>
+        <item name="android:actionMenuTextColor">@color/gris</item>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    </style>
+
+
+
+
+
 
 </resources>

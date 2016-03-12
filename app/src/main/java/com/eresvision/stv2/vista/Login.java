@@ -83,13 +83,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                     if (jsonObject.names().get(0).equals("success")) {
                         Toast.makeText(getApplicationContext(), "Bienvenido " + jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
-
+                        finish();
                     } else if (jsonObject.names().get(0).equals("error")) {
                         Toast.makeText(getApplicationContext(), "Error de registro " + jsonObject.getString("error"), Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(getApplicationContext(), "Error de servidor ", Toast.LENGTH_SHORT).show();
                     }
-                    finish();
+
 
                 } catch (JSONException e) {
                     e.printStackTrace();

@@ -11,7 +11,10 @@
     <RelativeLayout
         android:id="@+id/contenedor_central"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+
+        >
+
     </RelativeLayout>
 
     <!-- Drawer Pane -->
@@ -28,7 +31,7 @@
             android:id="@+id/tope_lateral"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="@color/material_blue_grey_800_copy"
+            android:background="@color/background_tope"
             android:gravity="center_vertical" >
 
             <ImageView
@@ -52,16 +55,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Luis"
-                    android:textColor="#fff"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Programador"
-                    android:textColor="#fff"
-                    android:textSize="16sp" />
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    />
             </LinearLayout>
         </RelativeLayout>
 
