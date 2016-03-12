@@ -1,4 +1,4 @@
-package com.eresvision.stv2.vista;
+package com.eresvision.vcs.vista;
 
 
 import java.util.ArrayList;
@@ -19,11 +19,10 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-import com.eresvision.stv2.lcchat.R;
-import com.eresvision.stv2.vista.fragments.MyAbout;
-import com.eresvision.stv2.vista.fragments.MyHome;
-import com.eresvision.stv2.vista.fragments.MySettings;
-import com.eresvision.stv2.modelo.NavItem;
+import com.eresvision.vcs.vista.fragments.MyAbout;
+import com.eresvision.vcs.vista.fragments.MyHome;
+import com.eresvision.vcs.vista.fragments.MySettings;
+import com.eresvision.vcs.modelo.NavItem;
 
 // CLASE
 public class MainActivity extends AppCompatActivity {

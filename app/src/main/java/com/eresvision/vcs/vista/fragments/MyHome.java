@@ -1,4 +1,4 @@
-package com.eresvision.stv2.vista.fragments;
+package com.eresvision.vcs.vista.fragments;
 
 
         import java.util.List;
@@ -18,14 +18,14 @@ package com.eresvision.stv2.vista.fragments;
         import android.widget.TabHost.OnTabChangeListener;
         import android.widget.TabHost.TabContentFactory;
 
-        import com.eresvision.stv2.controlador.MyFragmentPagerAdapter;
-        import com.eresvision.stv2.vista.fragments.tabs.Tab1Fragment;
-        import com.eresvision.stv2.vista.fragments.tabs.Tab2Fragment;
-        import com.eresvision.stv2.vista.fragments.tabs.Tab3Fragment;
-        import com.eresvision.stv2.vista.fragments.tabs.Tab4Fragment;
-        import com.eresvision.stv2.vista.fragments.tabs.Tab5Fragment;
-        import com.eresvision.stv2.vista.fragments.tabs.Tab6Fragment;
-        import com.eresvision.stv2.lcchat.R;
+        import com.eresvision.vcs.controlador.MyFragmentPagerAdapter;
+        import com.eresvision.vcs.vista.fragments.tabs.Tab1Fragment;
+        import com.eresvision.vcs.vista.fragments.tabs.Tab2Fragment;
+        import com.eresvision.vcs.vista.fragments.tabs.Tab3Fragment;
+        import com.eresvision.vcs.vista.fragments.tabs.Tab4Fragment;
+        import com.eresvision.vcs.vista.fragments.tabs.Tab5Fragment;
+        import com.eresvision.vcs.vista.fragments.tabs.Tab6Fragment;
+        import com.eresvision.vcs.vista.R;
 
 public class MyHome extends Fragment implements OnTabChangeListener,
         OnPageChangeListener {

@@ -1,5 +1,4 @@
-package com.eresvision.stv2.vista.fragments.tabs;
-
+package com.eresvision.vcs.vista.fragments.tabs;
 
 
         import android.os.Bundle;
@@ -9,15 +8,14 @@ package com.eresvision.stv2.vista.fragments.tabs;
         import android.view.View;
         import android.view.ViewGroup;
 
-        import com.eresvision.stv2.lcchat.R;
+        import com.eresvision.vcs.vista.R;
 
-public class Tab3Fragment extends Fragment {
-
+public class Tab2Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        View v = inflater.inflate(R.layout.tab3fragment, container, false);
+        View v = inflater.inflate(R.layout.tab2fragment, container, false);
         return v;
     }
+
 }

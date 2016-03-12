@@ -1,4 +1,4 @@
-package com.eresvision.stv2;
+package com.eresvision.vcs;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

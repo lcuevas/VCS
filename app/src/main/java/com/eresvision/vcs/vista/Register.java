@@ -1,4 +1,4 @@
-package com.eresvision.stv2.vista;
+package com.eresvision.vcs.vista;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,7 +19,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.eresvision.stv2.lcchat.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;

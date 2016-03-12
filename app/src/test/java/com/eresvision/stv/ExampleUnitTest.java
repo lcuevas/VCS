@@ -1,4 +1,4 @@
-package com.eresvision.stv2;
+package com.eresvision.vcs;
 
 import org.junit.Test;
 
